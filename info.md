@@ -26,7 +26,7 @@
 <BODY>
 </HTML>
 
-Дирекция (екатеринбург 8 марта 13):
+(Дирекция) екатеринбург 8 марта 13:
     [Коридор 4 этаж]	 https://mfc-video.site/live/dir_kor_4/playlist.m3u8
     [Вход 4 этаж]	 https://mfc-video.site/live/dir_exit_4/playlist.m3u8
     [Серверная 3 этаж]	 https://mfc-video.site/live/dir_server_3/playlist.m3u8
@@ -38,4 +38,9 @@
     [Серверная2]	 https://mfc-video.site/live/dir_server3_3/playlist.m3u8
     [Коридор 2]	 https://mfc-video.site/live/dir_kor2_3/playlist.m3u8
     
-
+ г. Алапаевск, ул. Ленина, 16
+ 
+ г. Арамиль, ул. Щорса, 57
+ 
+ г. Артемовский, ул. Почтовая, 2
+ 
