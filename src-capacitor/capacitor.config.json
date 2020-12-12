@@ -1,0 +1,7 @@
+{
+  "appId": "org.anycolabs.com",
+  "appName": "AnyCameraController",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www"
+}
