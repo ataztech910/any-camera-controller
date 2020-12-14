@@ -20,7 +20,7 @@
         <div class="selected__head">
           <div><a href="/"><img src="camera.png" alt="Logo"></a></div>
           <div>{{selectedAddress.addressName}}</div>
-          <div class="selected__head__cancel"><a href="/"><img src="cancel.svg" alt=""></a></div>
+          <div class="selected__head__cancel" v-on:click="clearSelection()"><img src="cancel.svg" alt=""></div>
         </div>
         <div class="selected__content">
           <div v-for="cameras in selectedAddress.cameraList">
@@ -95,6 +95,12 @@ export default class SearchComponent extends Vue {
     this.isActive = state;
   }
   clearSelection() {
+    this.selectedAddress.cameraList.forEach((camera: any) => {
+        const dumpPlayer = window['WowzaPlayer'].get(`${camera.uuid}`);
+        if (dumpPlayer != null) {
+          dumpPlayer.destroy();
+        }
+    });
     this.selectedAddress = {};
   }
   checkIfObjectIsNotEmpty() {
