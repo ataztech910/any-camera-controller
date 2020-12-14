@@ -139,6 +139,9 @@ export default class SearchComponent extends Vue {
       box-shadow: 0px 2px 14px -2px rgba(0,0,0,0.15)
       margin-bottom: $defaultMargin
       justify-content: space-between
+      a
+        display: block
+        max-height: 3rem
       img
         width: $logoSize
       &__cancel
