@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_new_cat_new_components",
+  "info": {
+    "name": "New Component",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "richtext"
+    }
+  }
+}

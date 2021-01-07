@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "another_lists",
+  "info": {
+    "name": "anotherList"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "testAddComponent": {
+      "type": "component",
+      "repeatable": true,
+      "component": "new-cat.new-component"
+    },
+    "test": {
+      "type": "string"
+    }
+  }
+}

@@ -44,7 +44,7 @@ Vue.use(VueAppend);
 
 @Component
 export default class SearchComponent extends Vue {
-  dataFileUrl = 'https://firebasestorage.googleapis.com/v0/b/any-camera-contro.appspot.com/o/data.json?alt=media&token=ceae6364-14e9-4c8b-b80e-0543346ec740';
+  dataFileUrl = '/cameras_data.json'; //'https://firebasestorage.googleapis.com/v0/b/any-camera-contro.appspot.com/o/data.json?alt=media&token=ceae6364-14e9-4c8b-b80e-0543346ec740';
   arrayOfCameraPoints: any = [];
   searchValue = '';
   resultCameraArray: any = [];
@@ -94,6 +94,7 @@ export default class SearchComponent extends Vue {
   removeBackground(state: any) {
     this.isActive = state;
   }
+
   clearSelection() {
     this.selectedAddress.cameraList.forEach((camera: any) => {
         const dumpPlayer = window['WowzaPlayer'].get(`${camera.uuid}`);
@@ -103,18 +104,24 @@ export default class SearchComponent extends Vue {
     });
     this.selectedAddress = {};
   }
+
   checkIfObjectIsNotEmpty() {
     return Object.keys(this.selectedAddress).length === 0 && this.selectedAddress.constructor === Object;
   }
+
   selectAddress(cameraList: any) {
     this.selectedAddress = cameraList;
   }
+
   updateArrayOfCameras(data: any) {
     this.arrayOfCameraPoints = JSON.parse(JSON.stringify(data));
   }
+
   mounted () {
     axios
-      .get(this.dataFileUrl)
+      .get(this.dataFileUrl , {
+        headers: {'Access-Control-Allow-Origin': '*',}
+      })
       .then(response => {
         this.updateArrayOfCameras(response.data)
       });

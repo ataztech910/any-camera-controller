@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "single_types",
+  "info": {
+    "name": "singleType"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "newType": {
+      "type": "component",
+      "repeatable": true,
+      "component": "new-cat.new-component"
+    }
+  }
+}

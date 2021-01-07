@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/another-lists",
+      "handler": "another-list.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/another-lists/count",
+      "handler": "another-list.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/another-lists/:id",
+      "handler": "another-list.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/another-lists",
+      "handler": "another-list.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/another-lists/:id",
+      "handler": "another-list.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/another-lists/:id",
+      "handler": "another-list.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

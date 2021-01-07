@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testtests",
+  "info": {
+    "name": "testtest"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "orders": {
+      "collection": "orders",
+      "via": "testtest"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
