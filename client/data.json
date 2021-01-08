@@ -1,0 +1,88 @@
+{
+  "cityList": [
+    {
+        "cityName" : "Екатеринбург",
+        "adressList" : [
+            {
+                "addressName" : "8 марта 13",
+                "cameraList" : [
+                    {
+                        "description" : "Коридор 4 этаж",
+                        "uuid" : "dir_kor_4"
+                    },
+                    {
+                      "description" : "Вход 4 этаж",
+                      "uuid" : "dir_exit_4"
+                    },
+                    {
+                      "description" : "Серверная 3 этаж",
+                      "uuid" : "dir_server_3"
+                    },
+                    {
+                      "description" : "Лифты 3 этаж",
+                      "uuid" : "dir_elevator_3"
+                    },
+                    {
+                      "description" : "Коридор 3 этаж",
+                      "uuid" : "dir_kor_3"
+                    },
+                    {
+                      "description" : "Столовая",
+                      "uuid" : "dir_stolovai"
+                    },
+                    {
+                      "description" : "Квадрат 3 этаж",
+                      "uuid" : "dir_server2_3"
+                    },
+                    {
+                      "description" : "Коридор 2",
+                      "uuid" : "dir_kor2_3"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+      "cityName" : "Екатеринбург 2",
+      "adressList" : [
+          {
+              "addressName" : "10 марта 3",
+              "cameraList" : [
+                  {
+                      "description" : "Коридор 4 этаж",
+                      "uuid" : "dir_kor_4"
+                  },
+                  {
+                    "description" : "Вход 4 этаж",
+                    "uuid" : "dir_exit_4"
+                  },
+                  {
+                    "description" : "Серверная 3 этаж",
+                    "uuid" : "dir_server_3"
+                  },
+                  {
+                    "description" : "Лифты 3 этаж",
+                    "uuid" : "dir_elevator_3"
+                  },
+                  {
+                    "description" : "Коридор 3 этаж",
+                    "uuid" : "dir_kor_3"
+                  },
+                  {
+                    "description" : "Столовая",
+                    "uuid" : "dir_stolovai"
+                  },
+                  {
+                    "description" : "Квадрат 3 этаж",
+                    "uuid" : "dir_server2_3"
+                  },
+                  {
+                    "description" : "Коридор 2",
+                    "uuid" : "dir_kor2_3"
+                  }
+              ]
+          }
+      ]
+  }
+]
+}
