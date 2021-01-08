@@ -5,12 +5,11 @@
 </template>
 
 <script lang="ts">
-import { Todo, Meta } from 'components/models'
 import SearchComponent from 'components/SearchComponent.vue'
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component({
-  components: { SearchComponent}
+  components: { SearchComponent }
 })
 export default class PageIndex extends Vue {
 

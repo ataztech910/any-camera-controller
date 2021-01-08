@@ -9,6 +9,7 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0",
     "serve": "quasar dev",
+    "start": "cd src-ssr && node index.js",
     "pwa": "quasar dev -m pwa",
     "android": "quasar dev -m capacitor -T android",
     "extension": "quasar dev -m bex"
