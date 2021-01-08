@@ -1,15 +1,14 @@
 <template>
   <div class="searchComponent">
-
     <div class="searchLayout" v-if="checkIfObjectIsNotEmpty()">
       <div class="searchLayout__input" v-bind:class="{ noBackground: isActive }">
         <div class="searchLayout__input__logo"><img src="camera.png" alt=""></div>
         <input type="text"  v-model="searchValue" placeholder="введите название города" @input="inputHandler" />
       </div>
       <div class="searchLayout__result" v-if="getResultArrayLength > 0">
-        <div v-for="result in resultCameraArray">
+        <div v-for="result in resultCameraArray" v-bind:key="result.cityName">
           <div class="searchLayout__result__cityName">{{result.cityName}}</div>
-          <div v-for="adresses in result.adressList">
+          <div v-for="adresses in result.adressList" v-bind:key="adresses.addressName">
             <div class="searchLayout__result__addressName" v-on:click="selectAddress(adresses)">{{adresses.addressName}}</div>
           </div>
         </div>
@@ -23,7 +22,7 @@
           <div class="selected__head__cancel" v-on:click="clearSelection()"><img src="cancel.svg" alt=""></div>
         </div>
         <div class="selected__content">
-          <div v-for="cameras in selectedAddress.cameraList">
+          <div v-for="cameras in selectedAddress.cameraList" v-bind:key="cameras.uuid">
             <div class="selected__content__camera">
               <div class="selected__content__camera__unit" :id="cameras.uuid" v-append="generateScript(cameras.uuid, cameras.description)" @appended="executeEval"></div>
               {{cameras.description}}
@@ -36,15 +35,15 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
-import axios from 'axios';
+import { Vue, Component } from 'vue-property-decorator'
+import axios from 'axios'
 
-const VueAppend = require('vue-append');
-Vue.use(VueAppend);
+const VueAppend = require('vue-append')
+Vue.use(VueAppend)
 
 @Component
 export default class SearchComponent extends Vue {
-  dataFileUrl = '/cameras_data.json'; //'https://firebasestorage.googleapis.com/v0/b/any-camera-contro.appspot.com/o/data.json?alt=media&token=ceae6364-14e9-4c8b-b80e-0543346ec740';
+  dataFileUrl = '/cameras_data.json';
   arrayOfCameraPoints: any = [];
   searchValue = '';
   resultCameraArray: any = [];
@@ -52,12 +51,13 @@ export default class SearchComponent extends Vue {
   isActive = false;
   html = '<p>test</p>';
   playerLicence = 'PLAY2-jPNR8-J8WTA-Eabzm-4Cj6E-u7CPZ';
-  inputHandler(event: any) {
-    this.resultCameraArray = this.findInCityList(event.target.value.trim());
+
+  inputHandler (event: any) {
+    this.resultCameraArray = this.findInCityList(event.target.value?.trim());
   }
 
   findInCityList(value: any) {
-    return value.toLowerCase() && value.length > 2 ? this.arrayOfCameraPoints.cityList.filter(point => point.cityName.toLowerCase().includes(value.toLowerCase()) ) : [];
+    return value.toLowerCase() && value.length > 2 ? this.arrayOfCameraPoints.cityList.filter((point: any) => point.cityName.toLowerCase().includes(value.toLowerCase()) ) : [];
   }
 
   generateScript(uuid: string, description: string) {
@@ -78,7 +78,7 @@ export default class SearchComponent extends Vue {
   }
   executeEval() {
     setTimeout(() => {
-      console.log(window['WowzaPlayer']);
+      // console.log(window['WowzaPlayer']);
     },0);
   }
 
@@ -96,8 +96,9 @@ export default class SearchComponent extends Vue {
   }
 
   clearSelection() {
+    const windowCopy: any = window;
     this.selectedAddress.cameraList.forEach((camera: any) => {
-        const dumpPlayer = window['WowzaPlayer'].get(`${camera.uuid}`);
+        const dumpPlayer = windowCopy['WowzaPlayer'].get(`${camera.uuid}`);
         if (dumpPlayer != null) {
           dumpPlayer.destroy();
         }
