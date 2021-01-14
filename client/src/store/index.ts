@@ -1,33 +1,22 @@
-import { store } from 'quasar/wrappers'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex, { StoreOptions } from 'vuex'
+import auth from './auth';
+import createPersistedState from "vuex-persistedstate";
 
-// import example from './module-example';
-// import { ExampleStateInterface } from './module-example/state';
+Vue.use(Vuex);
 
 /*
  * If not building with SSR mode, you can
  * directly export the Store instantiation
  */
 
-export interface StateInterface {
-  // Define your own store structure, using submodules if needed
-  // example: ExampleStateInterface;
-  // Declared as unknown to avoid linting issue. Best to strongly type as per the line above.
-  example: unknown;
-}
-
-export default store(function ({ Vue }) {
-  Vue.use(Vuex)
-
-  const Store = new Vuex.Store<StateInterface>({
-    modules: {
-      // example
-    },
-
-    // enable strict mode (adds overhead!)
-    // for dev mode only
-    strict: !!process.env.DEBUGGING
-  })
-
-  return Store
-})
+const store: StoreOptions<any> = {
+  state: {
+      version: '1.0.0',
+  },
+  modules: {
+    auth,
+  },
+  plugins: [createPersistedState()],
+};
+export default new Vuex.Store<any>(store);
