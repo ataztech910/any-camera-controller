@@ -12,7 +12,8 @@
     "start": "cd src-ssr && node index.js",
     "pwa": "quasar dev -m pwa",
     "android": "quasar dev -m capacitor -T android",
-    "extension": "quasar dev -m bex"
+    "extension": "quasar dev -m bex",
+    "buildpwa": "quasar build --mode pwa"
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",

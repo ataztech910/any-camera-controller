@@ -16,7 +16,7 @@
     >
       <q-input
         filled
-        v-model="identifier"
+        v-model="Name"
         label="Логин *"
         lazy-rules
         class="mt-1"
@@ -26,7 +26,7 @@
       <q-input
         filled
         type="password"
-        v-model="password"
+        v-model="Password"
         label="Пароль *"
         lazy-rules
         class="mt-1"
@@ -49,12 +49,12 @@ import store from '../store'
 
 @Component({})
 export default class LoginLayout extends Vue {
-  identifier: string = '';
-  password: string = '';
+  Name: string = '';
+  Password: string = '';
 
   login() {
-    const { identifier, password } = this;
-    store.dispatch('auth/AUTH_REQUEST', { identifier, password }).then(() => this.$router.push('/'))
+    const { Name, Password } = this;
+    store.dispatch('auth/AUTH_REQUEST', { Name, Password }).then(() => this.$router.push('/'))
   }
 
 }

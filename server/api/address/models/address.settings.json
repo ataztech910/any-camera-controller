@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "Address"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "city": {
+      "model": "city"
+    },
+    "cameras": {
+      "via": "address",
+      "collection": "cameras"
+    }
+  }
+}
