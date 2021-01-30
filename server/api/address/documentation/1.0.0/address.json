@@ -547,37 +547,6 @@
               }
             }
           },
-          "cameras": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "address": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -591,12 +560,6 @@
           },
           "city": {
             "type": "string"
-          },
-          "cameras": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",

@@ -143,7 +143,7 @@ export default class SearchComponent extends Vue {
       background: $searchBarBackground
       font-size: $cityName
       font-weight: bold
-      color: $primary
+      color: $primary_text
       box-shadow: 0px 2px 14px -2px rgba(0,0,0,0.15)
       margin-bottom: $defaultMargin
       justify-content: space-between
@@ -157,7 +157,7 @@ export default class SearchComponent extends Vue {
         overflow: hidden
         width: $logoSize
         height: $logoSize
-        background: $primary
+        background: $primary_text
         cursor: pointer
         box-shadow: 0px 2px 14px -2px rgba(0,0,0,0.15)
         transition: 0.5s
@@ -209,7 +209,7 @@ export default class SearchComponent extends Vue {
         height: $logoSize
     &__result
       background: $searchBarBackground
-      border: 1px solid
+      border: 1px solid #E0E0E0
       position: absolute
       width: $fullWidth
       padding: $defaultMargin

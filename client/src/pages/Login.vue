@@ -1,4 +1,4 @@
-<template>
+  <template>
 <div class="q-pa-md white-background round centeredDiv loginForm">
     <div class="login">
       <div class="login__header">
@@ -9,14 +9,13 @@
       </div>
     </div>
 
-
     <q-form
       @submit="login"
       class="mt-1"
     >
       <q-input
         filled
-        v-model="Name"
+        v-model="identifier"
         label="Логин *"
         lazy-rules
         class="mt-1"
@@ -26,13 +25,12 @@
       <q-input
         filled
         type="password"
-        v-model="Password"
+        v-model="password"
         label="Пароль *"
         lazy-rules
         class="mt-1"
         :rules="[ val => val && val.length > 0 || 'Поле не должно быть пустым']"
       />
-
 
       <div>
         <q-btn class="mt-1" label="Вход" type="submit" color="primary"/>
@@ -43,20 +41,18 @@
 </template>
 
 <script lang="ts">
-import { stat } from 'fs';
 import { Vue, Component } from 'vue-property-decorator'
 import store from '../store'
 
 @Component({})
 export default class LoginLayout extends Vue {
-  Name: string = '';
-  Password: string = '';
+  identifier = '';
+  password = '';
 
-  login() {
-    const { Name, Password } = this;
-    store.dispatch('auth/AUTH_REQUEST', { Name, Password }).then(() => this.$router.push('/'))
+  login () {
+    const { identifier, password } = this
+    store.dispatch('auth/AUTH_REQUEST', { identifier, password }).then(() => this.$router.push('/'))
   }
-
 }
 </script>
 

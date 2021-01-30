@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "01/18/2021 8:40:36 PM"
+    "x-generation-date": "01/30/2021 4:37:53 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3712,37 +3712,6 @@
               }
             }
           },
-          "cameras": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "address": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3756,12 +3725,6 @@
           },
           "city": {
             "type": "string"
-          },
-          "cameras": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           },
           "published_at": {
             "type": "string",
@@ -3786,9 +3749,6 @@
           "description": {
             "type": "string"
           },
-          "uuid": {
-            "type": "string"
-          },
           "address": {
             "required": [
               "id"
@@ -3803,12 +3763,6 @@
               "city": {
                 "type": "string"
               },
-              "cameras": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "published_at": {
                 "type": "string"
               },
@@ -3819,6 +3773,9 @@
                 "type": "string"
               }
             }
+          },
+          "uuid": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -3831,10 +3788,10 @@
           "description": {
             "type": "string"
           },
-          "uuid": {
+          "address": {
             "type": "string"
           },
-          "address": {
+          "uuid": {
             "type": "string"
           },
           "published_at": {

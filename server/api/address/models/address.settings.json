@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "addresses",
   "info": {
-    "name": "Address"
+    "name": "Address",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,10 +16,6 @@
     },
     "city": {
       "model": "city"
-    },
-    "cameras": {
-      "via": "address",
-      "collection": "cameras"
     }
   }
 }

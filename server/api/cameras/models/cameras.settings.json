@@ -14,12 +14,11 @@
     "description": {
       "type": "string"
     },
+    "address": {
+      "model": "address"
+    },
     "uuid": {
       "type": "string"
-    },
-    "address": {
-      "model": "address",
-      "via": "cameras"
     }
   }
 }

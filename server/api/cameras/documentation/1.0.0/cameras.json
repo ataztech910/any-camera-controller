@@ -525,9 +525,6 @@
           "description": {
             "type": "string"
           },
-          "uuid": {
-            "type": "string"
-          },
           "address": {
             "required": [
               "id"
@@ -542,12 +539,6 @@
               "city": {
                 "type": "string"
               },
-              "cameras": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
               "published_at": {
                 "type": "string"
               },
@@ -558,6 +549,9 @@
                 "type": "string"
               }
             }
+          },
+          "uuid": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -570,10 +564,10 @@
           "description": {
             "type": "string"
           },
-          "uuid": {
+          "address": {
             "type": "string"
           },
-          "address": {
+          "uuid": {
             "type": "string"
           },
           "published_at": {
