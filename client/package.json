@@ -16,7 +16,7 @@
     "buildpwa": "quasar build --mode pwa"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.15.11",
     "axios": "^0.18.1",
     "core-js": "^3.6.5",
     "postscribe": "^2.0.8",
