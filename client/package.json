@@ -18,7 +18,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "axios": "^0.18.1",
-    "core-js": "^3.6.5",
+    "core-js": "^3.28.0",
     "postscribe": "^2.0.8",
     "quasar": "^1.0.0",
     "vue-append": "^2.0.0",
